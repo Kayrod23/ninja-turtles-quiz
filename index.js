@@ -37,7 +37,6 @@ const ask = async (i) => {
     "\n\n";
 
   const numTurtles = Object.keys(turtles).length;
-  const str = "(?=.{1,";
   const validator = new RegExp(
     "(?=.{1," +
       numTurtles.toString().length +
@@ -48,15 +47,16 @@ const ask = async (i) => {
   );
 
   const question = {
-    name: "text",
+    name: "response",
     message: questionText,
     warning: colors.red.bold(
-      `\n\n\nPLEASE ENTER A NUMBER BETWEEN 1 and ${numTurtles}!`
+      `\n\n\nPLEASE ENTER A NUMBER BETWEEN 1 AND ${numTurtles}!`
     ),
+
     validator,
   };
 
-  responses.push((await prompt.get(question)).text);
+  responses.push((await prompt.get(question)).response);
   ask(i + 1);
 };
 
@@ -66,8 +66,9 @@ const finishQuiz = () => {
   const scores = {};
   responses.forEach((response, i) => {
     const { turtle } = questions[i].answers.find(
-      (_, i) => Number(response.trim()) === i + 1
+      (_, i) => Number(response) === i + 1
     );
+
     if (turtle.id in scores) {
       scores[turtle.id]++;
     } else {
