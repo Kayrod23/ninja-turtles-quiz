@@ -36,11 +36,24 @@ const ask = async (i) => {
       .join("\n") +
     "\n\n";
 
+  const numTurtles = Object.keys(turtles).length;
+  const str = "(?=.{1,";
+  const validator = new RegExp(
+    "(?=.{1," +
+      numTurtles.toString().length +
+      "}$)" +
+      "^[1-" +
+      (numTurtles < 10 ? numTurtles : 9) +
+      "]$"
+  );
+
   const question = {
     name: "text",
     message: questionText,
-    validator: /\d+/,
-    warning: colors.red.bold("\n\n\nPLEASE ENTER A NUMBER!"),
+    warning: colors.red.bold(
+      `\n\n\nPLEASE ENTER A NUMBER BETWEEN 1 and ${numTurtles}!`
+    ),
+    validator,
   };
 
   responses.push((await prompt.get(question)).text);
