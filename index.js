@@ -82,10 +82,7 @@ const finishQuiz = () => {
   });
 
   console.log(
-    "\n" +
-      `Your turtle is: ${colors[currentTurtle.color].bold(
-        currentTurtle.displayName
-      )}!`
+    "\n" + `Your turtle is: ${currentTurtle.color(currentTurtle.displayName)}!`
   );
 };
 

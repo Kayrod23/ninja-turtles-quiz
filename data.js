@@ -1,32 +1,34 @@
+const colors = require("@colors/colors/safe");
+
 const turtles = {
   ALICE: {
     id: 0,
     displayName: "Alice",
-    color: "magenta",
+    color: colors.magenta,
   },
 
   DONATELLO: {
     id: 1,
     displayName: "Donatello",
-    color: "brightMagenta",
+    color: colors.bold.brightMagenta,
   },
 
   LEONARDO: {
     id: 2,
     displayName: "Leonardo",
-    color: "blue",
+    color: colors.bold.blue,
   },
 
   MICHAELANGELO: {
     id: 3,
     displayName: "Michaelangelo",
-    color: "yellow",
+    color: colors.bold.yellow,
   },
 
   RAPHAEL: {
     id: 4,
     displayName: "Raphael",
-    color: "red",
+    color: colors.bold.red,
   },
 };
 
