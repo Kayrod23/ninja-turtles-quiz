@@ -2,31 +2,31 @@ const turtles = {
   ALICE: {
     id: 0,
     displayName: "Alice",
-    color: 'magenta',
+    color: "magenta",
   },
 
   DONATELLO: {
     id: 1,
     displayName: "Donatello",
-    color: 'brightMagenta'
+    color: "brightMagenta",
   },
 
   LEONARDO: {
     id: 2,
     displayName: "Leonardo",
-    color: 'blue'
+    color: "blue",
   },
 
   MICHAELANGELO: {
     id: 3,
     displayName: "Michaelangelo",
-    color: 'yellow'
+    color: "yellow",
   },
 
   RAPHAEL: {
     id: 4,
     displayName: "Raphael",
-    color: 'red'
+    color: "red",
   },
 };
 
