@@ -26,9 +26,9 @@ const ask = async (i) => {
   const { text, answers } = questions[i];
   const questionText =
         "\n" +
-        colors.green(text) +
+        colors.brightGreen.bold(text) +
         "\n\n" +
-        answers.map((answer, i) => `${colors.green(i + 1)}. ${answer.text}`).join("\n") +
+        answers.map((answer, i) => `${colors.green.bold(i + 1)}. ${colors.black.bold(answer.text)}`).join("\n") +
         "\n\n";
 
   const question = {
