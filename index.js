@@ -58,9 +58,7 @@ const finishQuiz = () => {
       currentTurtle = turtle;
       max = scores[turtle.id];
     }
-
-    console.log(currentTurtle.displayName);
   })
 
-  console.log("\n" + `Your turtle is: ${colors[currentTurtle.color](currentTurtle.displayName)}`);
+  console.log("\n" + `Your turtle is: ${colors[currentTurtle.color].bold(currentTurtle.displayName)}!`);
 };
