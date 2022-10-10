@@ -40,8 +40,6 @@ const ask = async (i) => {
   ask(i + 1);
 };
 
-ask(0);
-
 const finishQuiz = () => {
   let currentTurtle;
   let max = 0;
@@ -62,3 +60,5 @@ const finishQuiz = () => {
 
   console.log("\n" + `Your turtle is: ${colors[currentTurtle.color].bold(currentTurtle.displayName)}!`);
 };
+
+ask(0);
