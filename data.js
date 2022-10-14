@@ -84,26 +84,26 @@ const questions = [
     ],
   },
   {
-    text: "If you could go anywhere on vacation, where would you go",
+    text: "If you could go anywhere on vacation, where would you go?",
     answers: [
       {
-        text: "Sightseeing in Japan",
+        text: "Sightseeing in Japan.",
         turtle: turtles.LEONARDO,
       },
       {
-        text: "Going to the Maker's Fair in San Francisco",
+        text: "Going to the Maker's Fair in San Francisco.",
         turtle: turtles.DONATELLO,
       },
       {
-        text: "Going to the ferry coaster in Staten Island",
+        text: "Going to the ferry coaster in Staten Island.",
         turtle: turtles.ALICE,
       },
       {
-        text: "Surfing in Hawaii",
+        text: "Surfing in Hawaii.",
         turtle: turtles.MICHAELANGELO,
       },
       {
-        text: "I hate vacation",
+        text: "I hate vacation!",
         turtle: turtles.RAPHAEL,
       },
     ],
@@ -137,7 +137,7 @@ const questions = [
     text: "When you meet an enemy, you:",
     answers: [
       {
-        text: "Make fun of its looks",
+        text: "Make fun of its looks.",
         turtle: turtles.MICHAELANGELO,
       },
       {
