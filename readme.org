@@ -1,0 +1,21 @@
+* The Ninja Turtles Personality Quiz
+
+A toy command-line app for my daughter.
+
+It's based heavily on a personality quiz from the Teenage Mutant Ninja Turtles - Secrets of the Sewer exhibit, currently at the Liberty Science Center in NJ.
+
+But it imagines a fifth ninja turtle named Alice. Because that's what Alice imagined.
+
+** Installing And Running
+*** Pre-requisites
+1. Git
+2. Node
+3. A willingness to complete a Ninja Turtles Personality Quiz in a terminal emulator.
+
+*** Installation
+1. Clone this repo. =git clone https://www.github.com/abbreviatedman/ninja-turtles-quiz=
+2. Navigate into the =ninja-turtles-quiz= directory.
+3. Run =npm install=.
+
+*** Starting The Quiz
+Run =node index.js=.
