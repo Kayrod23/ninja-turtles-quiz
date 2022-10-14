@@ -1,27 +1,14 @@
-const prompt = require("prompt");
-const colors = require("@colors/colors/safe");
+const prompt = require("prompt-sync");
 
 const { questions, turtles } = require("./data");
+const {shuffle} = require('./helpers')
 
 const responses = [];
-prompt.message = "";
-prompt.start();
 
-for (let i = questions.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * i);
-  const temp = questions[i];
-  questions[i] = questions[j];
-  questions[j] = temp;
-}
-
-questions.forEach(({ answers }) => {
-  for (let i = answers.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * i);
-    const temp = answers[i];
-    answers[i] = answers[j];
-    answers[j] = temp;
-  }
-});
+shuffle(questions)
+for (let i = 0; i < questions.length; i++) {
+  shuffle(questions[i].answers)
+};
 
 const ask = async (i) => {
   if (i === questions.length) {
