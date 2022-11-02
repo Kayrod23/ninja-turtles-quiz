@@ -1,5 +1,8 @@
+// An external library that gives us a nice prompt command.
+// https://github.com/heapwolf/prompt-sync
 const prompt = require("prompt-sync")();
 
+// The questions and characters from our data file.
 const { questions, characters } = require("./data");
 
 // For each question in the data's questions array:
@@ -9,28 +12,6 @@ const { questions, characters } = require("./data");
   // Save the responses into one variable.
 
 // Maybe test at this point what our responses are!
-
-const responses = [];
-for (let i = 0; i < questions.length; i++) {
-  const question = questions[i];
-  const answers = question.answers;
-  let answerText = "";
-  for (let i = 0; i < answers.length; i++) {
-    answerText += `${i + 1}. ${answers[i].text}` + "\n";
-  }
-
-  const questionText = "\n" + question.text + "\n\n" + answerText + "\n\n";
-
-  console.clear();
-  console.log(questionText);
-  const userResponse = prompt();
-  responses.push(userResponse);
-}
-
-console.clear();
-for (let i = 0; i < responses.length; i++) {
-  console.log(responses[i]);
-}
 
 // Now we need to figure out who the character is who matched the most responses.
 
@@ -68,33 +49,3 @@ for (let i = 0; i < responses.length; i++) {
 // Update what character is the most-matched.
 
 // Finally, let's print out for our user what character they got!
-
-let currentCharacter;
-let max = 0;
-const scores = {};
-for (let responsesI = 0; responsesI < responses.length; responsesI++) {
-  const answers = questions[responsesI].answers;
-  for (let answersI = 0; answersI < answers.length; answersI++) {
-    if (Number(responses[responsesI] - 1) === answersI) {
-      const characterId = answers[answersI].characterId;
-      if (characterId in scores) {
-        scores[characterId]++;
-      } else {
-        scores[characterId] = 1;
-      }
-
-      if (scores[characterId] > max) {
-        max = scores[characterId];
-        currentCharacter = characters[characterId];
-      }
-
-      console.log({ scores });
-      console.log({ max });
-      console.log({ currentCharacter });
-    }
-  }
-}
-
-console.clear();
-console.log("You got:\n");
-console.log(currentCharacter + "!");
