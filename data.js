@@ -1,29 +1,21 @@
-const turtles = {
-  ALICE: {
+const characters = [
+  {
     id: 0,
-    displayName: "Alice",
-  },
-
-  DONATELLO: {
-    id: 1,
     displayName: "Donatello",
   },
-
-  LEONARDO: {
-    id: 2,
+  {
+    id: 1,
     displayName: "Leonardo",
   },
-
-  MICHAELANGELO: {
-    id: 3,
+  {
+    id: 2,
     displayName: "Michaelangelo",
   },
-
-  RAPHAEL: {
-    id: 4,
+  {
+    id: 3,
     displayName: "Raphael",
   },
-};
+];
 
 const questions = [
   {
@@ -31,23 +23,19 @@ const questions = [
     answers: [
       {
         text: "Orange",
-        turtle: turtles.MICHAELANGELO,
+        characterId: 2,
       },
       {
         text: "Red",
-        turtle: turtles.RAPHAEL,
+        characterId: 3,
       },
       {
         text: "Blue",
-        turtle: turtles.LEONARDO,
+        characterId: 1,
       },
       {
         text: "Purple",
-        turtle: turtles.DONATELLO,
-      },
-      {
-        text: "Pink",
-        turtle: turtles.ALICE,
+        characterId: 0,
       },
     ],
   },
@@ -56,23 +44,19 @@ const questions = [
     answers: [
       {
         text: "Horse",
-        turtle: turtles.LEONARDO,
+        characterId: 1,
       },
       {
         text: "Cat",
-        turtle: turtles.RAPHAEL,
+        characterId: 3,
       },
       {
         text: "Turtle",
-        turtle: turtles.DONATELLO,
+        characterId: 0,
       },
       {
         text: "Parrot",
-        turtle: turtles.MICHAELANGELO,
-      },
-      {
-        text: "Bunny",
-        turtle: turtles.ALICE,
+        characterId: 2,
       },
     ],
   },
@@ -81,23 +65,19 @@ const questions = [
     answers: [
       {
         text: "Sightseeing in Japan.",
-        turtle: turtles.LEONARDO,
+        characterId: 1,
       },
       {
         text: "Going to the Maker's Fair in San Francisco.",
-        turtle: turtles.DONATELLO,
-      },
-      {
-        text: "Going to the ferry coaster in Staten Island.",
-        turtle: turtles.ALICE,
+        characterId: 0,
       },
       {
         text: "Surfing in Hawaii.",
-        turtle: turtles.MICHAELANGELO,
+        characterId: 2,
       },
       {
         text: "I hate vacation!",
-        turtle: turtles.RAPHAEL,
+        characterId: 3,
       },
     ],
   },
@@ -106,23 +86,19 @@ const questions = [
     answers: [
       {
         text: "a giant, tricked-out van",
-        turtle: turtles.DONATELLO,
+        characterId: 0,
       },
       {
         text: "a muscle car",
-        turtle: turtles.MICHAELANGELO,
+        characterId: 2,
       },
       {
         text: "a Volkswagen Beetle",
-        turtle: turtles.RAPHAEL,
+        characterId: 3,
       },
       {
         text: "a sensible four-door sedan",
-        turtle: turtles.LEONARDO,
-      },
-      {
-        text: "A clean purple car",
-        turtle: turtles.ALICE,
+        characterId: 1,
       },
     ],
   },
@@ -131,23 +107,19 @@ const questions = [
     answers: [
       {
         text: "Make fun of its looks.",
-        turtle: turtles.MICHAELANGELO,
+        characterId: 2,
       },
       {
         text: "Keep your distance until the team arrives.",
-        turtle: turtles.DONATELLO,
+        characterId: 0,
       },
       {
         text: "Attack it immediately.",
-        turtle: turtles.RAPHAEL,
-      },
-      {
-        text: "Sneak up to them, knock them over, and jump on them.",
-        turtle: turtles.ALICE,
+        characterId: 3,
       },
       {
         text: "Plan your battle strategy.",
-        turtle: turtles.LEONARDO,
+        characterId: 1,
       },
     ],
   },
@@ -156,26 +128,22 @@ const questions = [
     answers: [
       {
         text: "Getting to learn strategies and tactics.",
-        turtle: turtles.LEONARDO,
+        characterId: 1,
       },
       {
         text: "Beating all your brothers in combat.",
-        turtle: turtles.RAPHAEL,
-      },
-      {
-        text: "Practicing your ninja moves.",
-        turtle: turtles.ALICE,
+        characterId: 3,
       },
       {
         text: "Jumping all around the dojo.",
-        turtle: turtles.MICHAELANGELO,
+        characterId: 2,
       },
       {
         text: "I'd actually rather be working in the lab.",
-        turtle: turtles.DONATELLO,
+        characterId: 0,
       },
     ],
   },
 ];
 
-module.exports = { questions, turtles };
+module.exports = { questions, characters };
