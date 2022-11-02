@@ -5,6 +5,18 @@ const prompt = require("prompt-sync")();
 // The questions and characters from our data file.
 const { questions, characters } = require("./data");
 
+
+
+for (let i = 0; i < questions.length; i++){
+  let userFacingQuestion = questions[i].text;
+  const answers = questions[i].answers;
+  let answerTexts = ''
+  for (let j = 0; j < answers.length; j++){
+    answerTexts[j].text += "/n" + answers[j].text
+  }
+  userFacingQuestion += "/n/n" + answerTexts
+  console.log(userFacingQuestion)
+}
 // For each question in the data's questions array:
   // Format the question into 1. the question's text and 2. a list from the question's answers.
   // Print that formatted question.
