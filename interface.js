@@ -4,8 +4,9 @@ const prompt = require("prompt-sync")();
 const questions = [
   "how are you?\n",
   "what's your name?\n",
-  "who's your daddy?\n",
+  "What's the best programming language?",
 ];
+
 const responses = [];
 
 for (let i = 0; i < questions.length; i++) {
