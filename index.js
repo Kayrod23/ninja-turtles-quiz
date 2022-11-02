@@ -36,16 +36,16 @@ const { questions, characters } = require("./data");
 
 // Loop through the responses they gave us.
 // For each response:
-// Find the matching question in the questions array (remember the matching rule above!).
-// Loop through its answers.
-// For each answer:
-// Check if it matches the user's response. Did they pick this answer?
-// If so:
-// Grab the `characterId` property on that answer.
-// Increase the characterId _key_ in our accumulator object to have a value 1 more than it is now.
-// Check if that score is the biggest we've seen so far.
-// If it is:
-// Update our biggest-seen score.
-// Update what character is the most-matched.
+  // Find the matching question in the questions array (remember the matching rule above!).
+  // Loop through its answers.
+  // For each answer:
+    // Check if it matches the user's response. Did they pick this answer?
+    // If so:
+      // Grab the `characterId` property on that answer.
+      // Increase the `characterId` _key_ in our accumulator object to have a value 1 more than it is now.
+      // Check if that score is the biggest we've seen so far.
+      // If it is:
+        // Update our biggest-seen score.
+        // Update what character is the most-matched.
 
 // Finally, let's print out for our user what character they got!
