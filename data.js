@@ -1,21 +1,4 @@
-const characters = [
-  {
-    id: 0,
-    displayName: "Donatello",
-  },
-  {
-    id: 1,
-    displayName: "Leonardo",
-  },
-  {
-    id: 2,
-    displayName: "Michaelangelo",
-  },
-  {
-    id: 3,
-    displayName: "Raphael",
-  },
-];
+const characters = ["Donatello", "Leonardo", "Michaelangelo", "Raphael"];
 
 const questions = [
   {

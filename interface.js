@@ -2,8 +2,8 @@
 const prompt = require("prompt-sync")();
 
 const questions = [
-  "how are you?\n",
-  "what's your name?\n",
+  "How are you?\n",
+  "What's your name?\n",
   "What's the best programming language?",
 ];
 
