@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-const { questions, turtles } = require("./data");
+const { questions, characters } = require("./data");
 
 const responses = [];
 for (let i = 0; i < questions.length; i++) {
@@ -17,11 +17,22 @@ for (let i = 0; i < questions.length; i++) {
   responses.push(response);
 }
 
-let currentTurtle;
+let currentCharacter;
 let max = 0;
 const scores = {};
 responses.forEach((response, i) => {
-  console.log(response);
-});
+  const { character } = questions[i].answers.find(
+    (_, i) => Number(response) === i + 1
+  );
 
-// console.log("\n" + `Your turtle is: ${currentTurtle.displayName}!`);
+  if (character.id in scores) {
+    scores[character.id]++;
+  } else {
+    scores[character.id] = 1;
+  }
+
+  if (scores[character.id] > max) {
+    currentCharacter = character;
+    max = scores[character.id];
+  }
+});

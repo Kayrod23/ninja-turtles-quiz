@@ -16,6 +16,7 @@ for (let i = 0; i < questions.length; i++) {
 }
 
 console.clear();
+console.log("Here were your responses");
 
 for (let i = 0; i < responses.length; i++) {
   console.log(responses[i]);
